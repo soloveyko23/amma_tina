@@ -292,14 +292,10 @@
     }
     gsap.registerPlugin(ScrollTrigger);
     gsap.from(".header", {
-        y: -100,
         ease: "power4.out",
         duration: 1,
         delay: .5,
-        opacity: 0,
-        stagger: {
-            amount: .3
-        }
+        opacity: 0
     });
     gsap.from(".info-desc__text", {
         x: -100,

@@ -927,10 +927,7 @@ body::after {
 
 .projects__project:last-child {
   margin-bottom: 0;
-}
-
-.projects__project:nth-child(even) {
-  margin-left: auto;
+  margin-top: 0;
 }
 
 .projects__project .project__title {
@@ -981,19 +978,10 @@ body::after {
   max-width: 30%;
 }
 
-.socials-section__right {
-  max-width: 50%;
-}
-
 .socials-section__text p {
   font-weight: 400;
   line-height: 120%;
-  letter-spacing: -0.02em;
   color: var(--color-text-body);
-}
-
-.socials-section__text p span {
-  opacity: 0.5;
 }
 
 .socials-section__list-socials ul {
@@ -1034,9 +1022,6 @@ body::after {
   top: 50%;
   z-index: 3;
   mix-blend-mode: lighten;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 .meetings__content {
@@ -1055,12 +1040,6 @@ body::after {
   font-weight: 400;
   line-height: 120%;
   text-align: justify;
-}
-
-.meetings__right {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 45%;
-          flex: 0 1 45%;
 }
 
 .meetings__right .right-meetings__text {
@@ -1094,6 +1073,18 @@ body::after {
 
   .hero .info-desc {
     opacity: 0.8;
+  }
+
+  .socials-section__right {
+    max-width: 50%;
+  }
+
+  .socials-section__text p {
+    letter-spacing: -0.02em;
+  }
+
+  .socials-section__text p span {
+    opacity: 0.5;
   }
 }
 
@@ -1395,7 +1386,7 @@ body::after {
   }
 
   .projects__images .image-01 img {
-    height: 34.8958333333vw;
+    height: 26.0416666667vw;
   }
 
   .projects__images .image-02 img {
@@ -1424,6 +1415,10 @@ body::after {
 
   .projects__project {
     margin-bottom: 4.1666666667vw;
+  }
+
+  .projects__project:nth-child(even) {
+    margin-left: auto;
   }
 
   .projects__project .project__header {
@@ -1495,6 +1490,12 @@ body::after {
   }
 
   .meetings__image img {
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+
+  .meetings__image img {
     width: 35.4166666667vw;
   }
 
@@ -1512,6 +1513,12 @@ body::after {
 
   .meetings__left p {
     font-size: 2.0833333333vw;
+  }
+
+  .meetings__right {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 45%;
+            flex: 0 1 45%;
   }
 
   .meetings__right .right-meetings__text {
@@ -1682,6 +1689,35 @@ body::after {
   .hero .info-desc__text p {
     max-width: 61%;
   }
+
+  .socials-section__list-socials ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .meetings__image img {
+    left: auto;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+
+  .meetings__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .meetings__right {
+    max-width: 50%;
+  }
 }
 
 @media (max-width: 991.98px) and (max-width: 479.98px) and (max-width: 20em) {
@@ -1731,6 +1767,12 @@ body::after {
 @media (max-width: 767.98px) {
   .header__menu .menu__textures {
     height: 70%;
+  }
+
+  .projects__background img {
+    z-index: 1;
+    top: 0;
+    height: 100%;
   }
 }
 
@@ -1804,7 +1846,7 @@ body::after {
   }
 
   .button-white {
-    font-size: 5.000208342vw;
+    font-size: 3.7501562565vw;
   }
 
   .button-white {
@@ -1862,7 +1904,7 @@ body::after {
   }
 
   .button-red {
-    font-size: 5.000208342vw;
+    font-size: 3.7501562565vw;
   }
 
   .button-red {
@@ -2068,6 +2110,14 @@ body::after {
     padding-top: 25.0010417101vw;
   }
 
+  .projects__background {
+    display: none;
+  }
+
+  .projects__images {
+    display: none;
+  }
+
   .projects__images .image-01 img {
     width: 104.1710071253vw;
   }
@@ -2085,11 +2135,33 @@ body::after {
   }
 
   .projects__left-project__images .projects-images__image img {
-    width: 104.1710071253vw;
+    width: 100%;
   }
 
-  .projects__left-project__images .projects-images__image img {
-    height: 145.8394099754vw;
+  .projects-images__image {
+    margin-top: 6.2502604275vw;
+  }
+
+  .projects-images__image img {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .projects__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .projects__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .projects__body {
@@ -2101,15 +2173,15 @@ body::after {
   }
 
   .projects__project {
-    margin-bottom: 8.33368057vw;
+    margin-top: 10.4171007125vw;
   }
 
   .projects__project .project__header {
-    margin-bottom: 5.000208342vw;
+    margin-bottom: 4.166840285vw;
   }
 
   .projects__project .project__title {
-    font-size: 8.33368057vw;
+    font-size: 5.2085503563vw;
   }
 
   .projects__project .project__content {
@@ -2117,7 +2189,7 @@ body::after {
   }
 
   .projects__project .project__content p {
-    font-size: 5.000208342vw;
+    font-size: 3.333472228vw;
   }
 
   .projects__project .project__content p {
@@ -2125,7 +2197,7 @@ body::after {
   }
 
   .projects__project .project__footer .soon {
-    font-size: 5.000208342vw;
+    font-size: 3.7501562565vw;
   }
 
   .socials-section {
@@ -2137,19 +2209,26 @@ body::after {
   }
 
   .socials-section__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .socials-section__body {
     gap: 8.33368057vw;
   }
 
   .socials-section__text {
-    margin-bottom: 12.500520855vw;
+    margin-bottom: 8.33368057vw;
   }
 
   .socials-section__text p {
-    font-size: 8.33368057vw;
+    font-size: 5.2085503563vw;
   }
 
   .socials-section__list-socials ul {
-    gap: 20.8342014251vw;
+    gap: 5.2085503563vw;
   }
 
   .socials-section__list-socials a {
@@ -2161,11 +2240,16 @@ body::after {
   }
 
   .meetings {
-    padding-top: 25.0010417101vw;
+    padding-top: 12.500520855vw;
+  }
+
+  .meetings__background img {
+    top: 0;
+    height: 100%;
   }
 
   .meetings__title {
-    font-size: 25.0010417101vw;
+    font-size: 10.000416684vw;
   }
 
   .meetings__title {
@@ -2173,7 +2257,13 @@ body::after {
   }
 
   .meetings__image img {
-    width: 141.6725696904vw;
+    width: 100%;
+    -webkit-transform: translateY(-28%);
+        -ms-transform: translateY(-28%);
+            transform: translateY(-28%);
+    right: 0%;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(42.82%, rgba(0, 0, 0, 0)), color-stop(93.016%, rgb(17, 17, 17)));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 42.82%, rgb(17, 17, 17) 93.016%);
   }
 
   .meetings__content {
@@ -2181,27 +2271,36 @@ body::after {
   }
 
   .meetings__left {
-    padding-top: 20.8342014251vw;
+    padding-top: 0vw;
   }
 
   .meetings__left p {
-    max-width: 106.2544272678vw;
+    max-width: 77.0865452727vw;
   }
 
   .meetings__left p {
-    font-size: 8.33368057vw;
+    font-size: 5.000208342vw;
+    font-weight: 700;
+  }
+
+  .meetings__left p {
+    margin-bottom: 72.9197049877vw;
+  }
+
+  .meetings__right {
+    max-width: 100%;
   }
 
   .meetings__right .right-meetings__text {
-    font-size: 8.33368057vw;
+    font-size: 5.000208342vw;
   }
 
   .meetings__right .right-meetings__text {
-    margin-bottom: 56.2523438477vw;
+    margin-bottom: 6.2502604275vw;
   }
 
   .meetings__right .right-meetings__subtext {
-    font-size: 5.000208342vw;
+    font-size: 3.333472228vw;
   }
 
   .meetings__right .right-meetings__subtext {
@@ -2513,7 +2612,7 @@ body::after {
   }
 
   .projects__images .image-01 img {
-    width: 50.404242021vw;
+    width: 35.2829694147vw;
   }
 
   .projects__images .image-01 img {
@@ -2521,19 +2620,19 @@ body::after {
   }
 
   .projects__images .image-02 img {
-    width: 65.5255146273vw;
+    width: 40.3233936168vw;
   }
 
   .projects__images .image-02 img {
+    height: 30.2425452126vw;
+  }
+
+  .projects__left-project__images .projects-images__image img {
+    width: 40.3233936168vw;
+  }
+
+  .projects__left-project__images .projects-images__image img {
     height: 50.404242021vw;
-  }
-
-  .projects__left-project__images .projects-images__image img {
-    width: 50.404242021vw;
-  }
-
-  .projects__left-project__images .projects-images__image img {
-    height: 70.5659388294vw;
   }
 
   .projects__body {
@@ -2545,7 +2644,7 @@ body::after {
   }
 
   .projects__project {
-    margin-bottom: 4.0323393617vw;
+    margin-bottom: 6.5525514627vw;
   }
 
   .projects__project .project__header {
@@ -2553,7 +2652,7 @@ body::after {
   }
 
   .projects__project .project__title {
-    font-size: 4.0323393617vw;
+    font-size: 3.0242545213vw;
   }
 
   .projects__project .project__content {
@@ -2561,7 +2660,7 @@ body::after {
   }
 
   .projects__project .project__content p {
-    font-size: 2.419403617vw;
+    font-size: 2.0161696808vw;
   }
 
   .projects__project .project__content p {
@@ -2569,7 +2668,7 @@ body::after {
   }
 
   .projects__project .project__footer .soon {
-    font-size: 2.419403617vw;
+    font-size: 2.0161696808vw;
   }
 
   .socials-section {
@@ -2589,11 +2688,11 @@ body::after {
   }
 
   .socials-section__text p {
-    font-size: 4.0323393617vw;
+    font-size: 2.5202121011vw;
   }
 
   .socials-section__list-socials ul {
-    gap: 10.0808484042vw;
+    gap: 4.0323393617vw;
   }
 
   .socials-section__list-socials a {
@@ -2605,11 +2704,11 @@ body::after {
   }
 
   .meetings {
-    padding-top: 14.1131877659vw;
+    padding-top: 10.0808484042vw;
   }
 
   .meetings__title {
-    font-size: 12.097018085vw;
+    font-size: 8.0646787234vw;
   }
 
   .meetings__title {
@@ -2617,7 +2716,7 @@ body::after {
   }
 
   .meetings__image img {
-    width: 68.5497691486vw;
+    width: 45.3638178189vw;
   }
 
   .meetings__content {
@@ -2629,23 +2728,23 @@ body::after {
   }
 
   .meetings__left p {
-    max-width: 51.4123268614vw;
+    max-width: 45.3638178189vw;
   }
 
   .meetings__left p {
-    font-size: 4.0323393617vw;
+    font-size: 2.8226375532vw;
   }
 
   .meetings__right .right-meetings__text {
-    font-size: 3.0242545213vw;
+    font-size: 2.8226375532vw;
   }
 
   .meetings__right .right-meetings__text {
-    margin-bottom: 27.2182906913vw;
+    margin-bottom: 10.0808484042vw;
   }
 
   .meetings__right .right-meetings__subtext {
-    font-size: 2.419403617vw;
+    font-size: 1.8145527128vw;
   }
 
   .meetings__right .right-meetings__subtext {
