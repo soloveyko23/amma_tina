@@ -255,48 +255,6 @@
     }
     const da = new DynamicAdapt("max");
     da.init();
-    let currentTheme;
-    const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches;
-    const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches;
-    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified;
-    document.addEventListener("DOMContentLoaded", (function() {
-        currentTheme = getUserThemePreference();
-        setTheme(currentTheme);
-        const themeSwitcher = document.getElementById("themeSwitcher");
-        themeSwitcher.addEventListener("change", toggleTheme);
-        window.matchMedia("(prefers-color-scheme: dark)").addListener((e => e.matches && setTheme("dark")));
-        window.matchMedia("(prefers-color-scheme: light)").addListener((e => e.matches && setTheme("light")));
-    }));
-    function getUserThemePreference() {
-        let preference;
-        const localStorageTheme = localStorage.getItem("currentTheme");
-        if (localStorageTheme) preference = localStorageTheme;
-        if (isDarkMode) preference = localStorageTheme ? localStorageTheme : "dark"; else if (isLightMode) preference = localStorageTheme ? localStorageTheme : "light"; else if (isNotSpecified || hasNoSupport) preference = localStorageTheme ? localStorageTheme : "light";
-        return preference;
-    }
-    function toggleTheme() {
-        if (currentTheme === "light") setTheme("dark"); else setTheme("light");
-    }
-    function setTheme(theme) {
-        let oldTheme, togglePosition;
-        if (theme === "light") {
-            oldTheme = "dark";
-            togglePosition = true;
-        } else {
-            oldTheme = "light";
-            togglePosition = false;
-        }
-        document.documentElement.classList.add(theme);
-        document.documentElement.classList.remove(oldTheme);
-        const themeSwitcher = document.getElementById("themeSwitcher");
-        themeSwitcher.checked = togglePosition;
-        saveCurrentTheme(theme);
-    }
-    function saveCurrentTheme(theme) {
-        currentTheme = theme;
-        localStorage.setItem("currentTheme", theme);
-    }
     gsap.registerPlugin(ScrollTrigger);
     gsap.from(".header", {
         ease: "power4.out",
